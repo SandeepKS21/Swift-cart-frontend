@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "swift-cart",
+    "slug": "swift-cart",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "your-app-scheme",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app uses the photo library to let you choose profile pictures.",
+        "NSCameraUsageDescription": "This app uses the camera to let you take profile pictures."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yourcompany.yourappname",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "expo": {
+      "plugins": [
+        "expo-router",
+        [
+          "expo-location",
+          {
+            "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+          }
+        ]
+      ],
+      "ios": {
+        "infoPlist": {
+          "UIBackgroundModes": [
+            "location"
+          ]
+        }
+      },
+      "android": {
+        "permissions": [
+          "ACCESS_FINE_LOCATION",
+          "ACCESS_COARSE_LOCATION",
+          "ACCESS_BACKGROUND_LOCATION"
+          
+        ]
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5588d9f1-4baa-498d-820c-27871ea81abd"
+      }
+    }
+  }
+}
